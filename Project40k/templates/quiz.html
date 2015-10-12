@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>GAME</title>
+ 
+ 	<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+ 
+     <link href="../static/css/jumbotron-narrow.css" rel="stylesheet">
+<link href="../static/css/signup.css" rel="stylesheet">
+
+       <script type="text/javascript" src="../static/js/jquery-2.1.4.min.js" ></script>
+<script type="text/javascript" src="../static/js/quiz.js" ></script>
+
+
+ 
+ 
+</head>
+ <body>
+<p class="navbar-text navbar-right">{% if username %}
+   {{username}}
+{% else %}
+   Not logged
+{% endif %}
+    
+</p>
+<button class="btn btn-danger" type="button">
+  Your point <span id="score" class="badge">4</span>
+</button>
+
+ <div class="jumbotron backgroundCustome">
+
+    <label id="question" for="content">content</label>
+	<form name="quizForm" action="">
+	<input type="hidden" id="txtQuestionId" name="txtQuestionId" value="" >
+ <div class="input-group">
+      <span class="input-group-addon">
+	<input type="radio" name="ans" value="1" >
+	</span>
+<label id="ansA" class="form-control"  for="content">content</label>
+</div>
+ <div class="input-group">
+      <span class="input-group-addon">
+<input type="radio" name="ans" value="2" >
+</span>
+<label id="ansB" class="form-control"  for="content">content</label>
+</div>
+
+<div class="input-group">
+      <span class="input-group-addon">
+<input type="radio" name="ans" value="3" >
+</span>
+
+<label id="ansC" class="form-control"   for="content">content</label>
+</div>
+<div class="input-group">
+      <span class="input-group-addon">
+<input type="radio" name="ans" value="4">
+</span>
+<label id="ansD" class="form-control"  for="content">content</label>
+</div>
+
+</form>
+ <button id="btnNext" class="btn btn-lg btn-primary btn-block btnCustome" type="button">Next</button>
+</div>
+
+</body>

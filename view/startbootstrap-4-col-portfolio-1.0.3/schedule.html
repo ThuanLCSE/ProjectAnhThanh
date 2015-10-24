@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>4 Col Portfolio - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+	
+	<!--calendar css -->
+	<link href="css/fullcalendar.css" rel="stylesheet">
+	<link href="css/fullcalendar.print.css" rel="stylesheet" media="print">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">In Game</a>
+            </div>
+                <ul class="nav navbar-nav">
+                   
+                    <li>
+                        <a href="#">User name</a>
+                    </li>
+                    <li>
+                        <a href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>       <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+   
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        
+
+        <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                 <li>
+                    <a data-toggle="collapse" href="#res-list-sub">
+					    Resource
+					</a>
+					<div class="panel-collapse collapse" id="res-list-sub">
+					<div class="panel-body">
+						<a href="#" >Acquire resource to team</a>
+						<a href="#" >Resource list</a>
+						<a href="#" >Assign resource to task</a>
+					</div>
+					</div>
+                 </li>
+                <li>
+                    <a data-toggle="collapse" href="#task-list-sub">
+					    Tasks list
+					</a>
+					<div class="panel-collapse collapse" id="task-list-sub">
+					<div class="panel-body">
+						<a href="#" >See task list</a>
+						<a href="#" >Add more task</a>
+					</div>
+					</div>
+                 </li>
+				<li>
+                    <a data-toggle="collapse" href="#schedule-sub">
+					    Schedule
+					</a>
+					<div class="panel-collapse collapse" id="schedule-sub">
+					<div class="panel-body">
+						<a href="#" >See schedule</a>
+					</div>
+					</div>
+                 </li>
+                 <li>
+                    <a data-toggle="collapse" href="#mail-list-sub">
+						Mail list
+					</a>
+					<div class="panel-collapse collapse" id="mail-list-sub">
+					<div class="panel-body">
+						<a href="#" >See mail list</a>
+					</div>
+					</div>
+                 </li>
+              
+                <li>
+                    <a data-toggle="collapse" href="#work-log-sub">
+						Work log
+					</a>
+				<div class="panel-collapse collapse" id="work-log-sub">
+					<div class="panel-body">
+						<a href="#" >See work log</a>
+					</div>
+				</div>
+                  </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+						<!-- Page Heading -->
+					<div class="col-lg-12">
+						<h1 class="page-header">PROJECT-NAME
+							<small>Planning phase</small>
+						</h1>
+					</div>
+					<!-- /.row -->
+					<h2>Schedule</h2>
+					
+					
+					
+					<!--schedule -->
+					<div id="calendar" class="fc fc-ltr fc-unthemed"></div>
+
+					<!--schedule -->
+	
+                </div>
+				<br/>
+				<div>Registration closes in <span id="time">05:00</span> minutes!</div>
+
+				<button class="btn btn-default">Next phase</button>
+            </div>
+        </div>
+		
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>SIM project</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	
+	<!-- calendar js -->
+<script src="js/moment.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/fullcalendar.min.js"></script>
+	
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/jquery.simple.timer.js"></script>
+	
+	
+	<!-- custom -->
+	<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+  function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.text(minutes + ":" + seconds);
+	if (timer == 15){
+	alert('con 15[p');
+	}
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+jQuery(function ($) {
+    var fiveMinutes = 610 ,
+        display = $('#time');
+    startTimer(fiveMinutes, display);
+});
+$('.dropdown-toggle').dropdown();
+    </script>
+	
+	<!--schedule data-->
+<script>
+
+	$(document).ready(function() {
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			defaultDate: '2015-02-12',
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				{
+					title: 'All Day Event',
+					start: '2015-02-01'
+				},
+				{
+					title: 'Long Event',
+					start: '2015-02-07',
+					end: '2015-02-10'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2015-02-09T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2015-02-16T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2015-02-11',
+					end: '2015-02-13'
+				},
+				{
+					title: 'Meeting',
+					start: '2015-02-12T10:30:00',
+					end: '2015-02-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2015-02-12T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2015-02-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2015-02-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2015-02-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2015-02-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2015-02-28'
+				}
+			]
+		});
+		
+	});
+
+</script>
+					<!--schedule data -->
+</body>
+
+</html>

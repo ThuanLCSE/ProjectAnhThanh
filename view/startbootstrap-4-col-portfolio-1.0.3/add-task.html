@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>4 Col Portfolio - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Bootstrap Core CSS -->
+    <link href="css/jquery-ui.css" rel="stylesheet">
+	
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">In Game</a>
+            </div>
+                <ul class="nav navbar-nav">
+                   
+                    <li>
+                        <a href="#">User name</a>
+                    </li>
+                    <li>
+                        <a href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>       <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+   
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        
+
+        <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                 <li>
+                    <a data-toggle="collapse" href="#res-list-sub">
+					    Resource
+					</a>
+					<div class="panel-collapse collapse" id="res-list-sub">
+					<div class="panel-body">
+						<a href="#" >Acquire resource to team</a>
+						<a href="#" >Resource list</a>
+						<a href="#" >Assign resource to task</a>
+					</div>
+					</div>
+                 </li>
+                <li>
+                    <a data-toggle="collapse" href="#task-list-sub">
+					    Tasks list
+					</a>
+					<div class="panel-collapse collapse" id="task-list-sub">
+					<div class="panel-body">
+						<a href="#" >See task list</a>
+						<a href="#" >Add more task</a>
+					</div>
+					</div>
+                 </li>
+				<li>
+                    <a data-toggle="collapse" href="#schedule-sub">
+					    Schedule
+					</a>
+					<div class="panel-collapse collapse" id="schedule-sub">
+					<div class="panel-body">
+						<a href="#" >See schedule</a>
+					</div>
+					</div>
+                 </li>
+                 <li>
+                    <a data-toggle="collapse" href="#mail-list-sub">
+						Mail list
+					</a>
+					<div class="panel-collapse collapse" id="mail-list-sub">
+					<div class="panel-body">
+						<a href="#" >See mail list</a>
+					</div>
+					</div>
+                 </li>
+              
+                <li>
+                    <a data-toggle="collapse" href="#work-log-sub">
+						Work log
+					</a>
+				<div class="panel-collapse collapse" id="work-log-sub">
+					<div class="panel-body">
+						<a href="#" >See work log</a>
+					</div>
+				</div>
+                  </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+						<!-- Page Heading -->
+					<div class="col-lg-12">
+						<h1 class="page-header">PROJECT-NAME
+							<small>Planning phase</small>
+						</h1>
+					</div>
+					<!-- /.row -->
+					<h2> Add new task </h2>
+					<div class="form-group">
+						  <label for="task-name">Task Name</label>
+						  <input type="text" class="form-control" id="task-name">
+						
+						  <label for="datepicker">Deadline</label>
+							<input class="form-control" type="text" id="datepicker">
+						  
+						  <label for="q3">Predecessor</label>
+						  <input class="form-control" type="text" id="q3">
+						  
+						  <label for="q4">Workload</label>
+						 <input class="form-control" type="text" id="q4">
+						  
+						  <label for="q4">Affect Factors</label>
+						  <div id="tableholer">
+						  <table id="myTable" class="table table-bordered">
+							<thead>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+								<th>Percentage of trigger</th>
+								<th>Affect Resuslts</th>
+								<th>Type</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Name1</td>
+								<td>Description1</td>
+								<td>10%</td>
+								<td>$50.00</td>
+								<td>trigger</td>
+							</tr>
+						   
+							</tbody>
+						    </table>
+							</div>
+							<input type="button" onclick="append()" value="Add more"/>
+						 <br>
+						  <label for="q4">Resource Attributes Requirement</label>
+						  <input class="form-control" type="text" id="q4">
+						  	
+						  <label for="q4">Resource Using</label>
+						  <input class="form-control" type="text" id="q4">
+						  
+						  <label>Status</label> <br>
+							<div class="btn-group" data-toggle="buttons">
+								<label class="btn btn-default">
+									<input type="radio" id="q156" name="quality[25]" value="1" /> Open
+								</label> 
+								<label class="btn btn-danger">
+									<input type="radio" id="q157" name="quality[25]" value="2" /> Process
+								</label> 
+								<label class="btn btn-info">
+									<input type="radio" id="q158" name="quality[25]" value="3" /> Info
+								</label> 
+								<label class="btn btn-success">
+									<input type="radio" id="q159" name="quality[25]" value="4" /> Done
+								</label> 
+								<label class="btn btn-default active">
+									<input type="radio" id="q160" name="quality[25]" checked="checked" value="5" /> Default
+								</label>
+							</div>
+
+						</div>
+						<button type="submit" class="btn btn-default">Submit report</button>
+						</div>
+                </div>
+				
+            </div>
+        </div>
+		
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>SIM project</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	 <!-- jQuery UI -->
+    <script src="js/jquery-ui.js"></script>
+	
+	
+	<!-- custom -->
+	<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+	$(function() {
+		$( "#datepicker" ).datepicker();
+	});
+	$('.dropdown-toggle').dropdown();
+
+	function append(){
+        var table = $("#myTable");
+        $(table).remove();
+        var tr = $("<tr></tr>");
+        $("<td></td>").html('Test').appendTo(tr);
+        $("<td></td>").html('test').appendTo(tr);
+        $("<td></td>").html('test').appendTo(tr);
+        $("<td></td>").html('test').appendTo(tr);
+        $("<td></td>").html('test').appendTo(tr);
+        $(tr).appendTo(table);
+        $(table).appendTo($('#tableholer'));
+		
+    }
+
+    </script>
+</body>
+
+</html>
